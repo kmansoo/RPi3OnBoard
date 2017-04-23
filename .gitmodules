@@ -1,3 +1,6 @@
 [submodule "Dependence/Luna"]
 	path = Dependence/Luna
 	url = https://github.com/kmansoo/Luna.git
+[submodule "Dependence/iotivity"]
+	path = Dependence/iotivity
+	url = https://github.com/iotivity/iotivity.git
