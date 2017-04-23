@@ -57,28 +57,28 @@ END_MESSAGE_MAP()
 
 CIoTDeviceManagerEmulatorDlg::CIoTDeviceManagerEmulatorDlg(CWnd* pParent /*=NULL*/)
 	: CDialogEx(IDD_IoTDeviceManagerEmulator_DIALOG, pParent)
-    , doorLockName1_(_T(""))
+    , DoorLockName1_(_T(""))
     , oOpenAPIManager_(*this)
 {
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
 
     for (int index = 0; index < IoTDeviceDeviceManager::CV_MAX_BULB_COUNT; index++) {
-        bulbName_[index] = oDeviceManager_.bulbName_[index].c_str();
+        BulbName_[index] = oDeviceManager_.BulbName_[index].c_str();
     }
 
-    doorLockName1_ = oDeviceManager_.doorLockName1_.c_str();
+    DoorLockName1_ = oDeviceManager_.DoorLockName1_.c_str();
 }
 
 void CIoTDeviceManagerEmulatorDlg::DoDataExchange(CDataExchange* pDX)
 {
     CDialogEx::DoDataExchange(pDX);
-    DDX_Text(pDX, IDC_BULB_NAME_1, bulbName_[0]);
-    DDX_Text(pDX, IDC_BULB_NAME_2, bulbName_[1]);
-    DDX_Text(pDX, IDC_BULB_NAME_3, bulbName_[2]);
+    DDX_Text(pDX, IDC_BULB_NAME_1, BulbName_[0]);
+    DDX_Text(pDX, IDC_BULB_NAME_2, BulbName_[1]);
+    DDX_Text(pDX, IDC_BULB_NAME_3, BulbName_[2]);
     DDX_Control(pDX, IDC_BULB_1, ctlBulb_[0]);
     DDX_Control(pDX, IDC_BULB_2, ctlBulb_[1]);
     DDX_Control(pDX, IDC_BULB_3, ctlBulb_[2]);
-    DDX_Text(pDX, IDC_DOOR_LOCK_NAME_1, doorLockName1_);
+    DDX_Text(pDX, IDC_DOOR_LOCK_NAME_1, DoorLockName1_);
     DDX_Control(pDX, IDC_DOOR_LOCK_1, ctlDoorLock1_);
 }
 
@@ -194,7 +194,7 @@ bool    CIoTDeviceManagerEmulatorDlg::setBulbStatus(std::string name, bool on) {
     }
     else {
         for (int count = 0; count < oDeviceManager_.CV_MAX_BULB_COUNT; count++) {
-            if (bulbName_[count] == name.c_str()) {
+            if (BulbName_[count] == name.c_str()) {
                 oDeviceManager_.BulbStatus_[count] = on;
                 ctlBulb_[count].SetBkColor(getBulbColor(oDeviceManager_.BulbStatus_[count]));
                 return true;
@@ -211,7 +211,7 @@ bool    CIoTDeviceManagerEmulatorDlg::getBulbStatus(std::string name, std::strin
     }
     else {
         for (int count = 0; count < oDeviceManager_.CV_MAX_BULB_COUNT; count++) {
-            if (bulbName_[count] == name.c_str()) {
+            if (BulbName_[count] == name.c_str()) {
                 Luna::ccString::format(
                     status_json,
                     "{\n" \
@@ -236,7 +236,7 @@ bool    CIoTDeviceManagerEmulatorDlg::getAllBulbsStatus(std::string& status_json
         "  \"accessories\": [\n";
 
     for (int count = 0; count < oDeviceManager_.CV_MAX_BULB_COUNT; count++) {
-        CT2A name(bulbName_[count]);
+        CT2A name(BulbName_[count]);
 
         Luna::ccString::format(
             accessory_status,
@@ -265,7 +265,7 @@ bool    CIoTDeviceManagerEmulatorDlg::getAllBulbsStatus(std::string& status_json
 
 bool    CIoTDeviceManagerEmulatorDlg::setDoorLockStatus(std::string name, std::string status) {
 
-    if (doorLockName1_ == name.c_str()) {
+    if (DoorLockName1_ == name.c_str()) {
 
         if (status == "closed")
             oDeviceManager_.DoorLockStatus1_ = true;
@@ -282,16 +282,14 @@ bool    CIoTDeviceManagerEmulatorDlg::setDoorLockStatus(std::string name, std::s
 
 bool    CIoTDeviceManagerEmulatorDlg::getDoorLockStatus(std::string name, std::string& status_json) {
 
-    if (doorLockName1_ == name.c_str()) {
-        CT2A name(doorLockName1_);
-
+    if (DoorLockName1_ == name.c_str()) {
         Luna::ccString::format(
             status_json,
             "    {\n" \
             "      \"name\": \"%s\",\n" \
             "      \"lock_status\": \"%s\"\n" \
             "    }",
-            name.m_psz,
+            name.c_str(),
             (oDeviceManager_.DoorLockStatus1_) ? "closed" : "open");
 
         return true;
@@ -308,7 +306,7 @@ bool    CIoTDeviceManagerEmulatorDlg::getAllDoorLockStatus(std::string& status_j
         "{\n" \
         "  \"accessories\": [\n";
 
-    CT2A name(doorLockName1_);
+    CT2A name(DoorLockName1_);
 
     Luna::ccString::format(
         accessory_status,

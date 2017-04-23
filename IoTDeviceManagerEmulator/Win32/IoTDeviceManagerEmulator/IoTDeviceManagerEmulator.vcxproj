@@ -93,7 +93,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>../../../Dependency/Luna/src/ThirdPartyLibrary/ccMongooseServer/include;../../../Dependency/Luna/src/FossLibrary/ccJsonParser/include;../../../Dependency/Luna/src/Library/ccWebServer/include;../../../Dependency/Luna/src/Library/ccNetwork/include;../../../Dependency/Luna/src/Library/ccCore/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../../Dependence/Luna/src/ThirdPartyLibrary/ccMongooseServer/include;../../../Dependence/Luna/src/FossLibrary/ccJsonParser/include;../../../Dependence/Luna/src/Library/ccWebServer/include;../../../Dependence/Luna/src/Library/ccNetwork/include;../../../Dependence/Luna/src/Library/ccCore/include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -116,7 +116,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>../../../Dependency/Luna/src/ThirdPartyLibrary/ccMongooseServer/include;../../../Dependency/Luna/src/FossLibrary/ccJsonParser/include;../../../Dependency/Luna/src/Library/ccWebServer/include;../../../Dependency/Luna/src/Library/ccNetwork/include;../../../Dependency/Luna/src/Library/ccCore/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../../Dependence/Luna/src/ThirdPartyLibrary/ccMongooseServer/include;../../../Dependence/Luna/src/FossLibrary/ccJsonParser/include;../../../Dependence/Luna/src/Library/ccWebServer/include;../../../Dependence/Luna/src/Library/ccNetwork/include;../../../Dependence/Luna/src/Library/ccCore/include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -141,7 +141,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>../../../Dependency/Luna/src/ThirdPartyLibrary/ccMongooseServer/include;../../../Dependency/Luna/src/FossLibrary/ccJsonParser/include;../../../Dependency/Luna/src/Library/ccWebServer/include;../../../Dependency/Luna/src/Library/ccNetwork/include;../../../Dependency/Luna/src/Library/ccCore/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../../Dependence/Luna/src/ThirdPartyLibrary/ccMongooseServer/include;../../../Dependence/Luna/src/FossLibrary/ccJsonParser/include;../../../Dependence/Luna/src/Library/ccWebServer/include;../../../Dependence/Luna/src/Library/ccNetwork/include;../../../Dependence/Luna/src/Library/ccCore/include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -168,7 +168,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>../../../Dependency/Luna/src/ThirdPartyLibrary/ccMongooseServer/include;../../../Dependency/Luna/src/FossLibrary/ccJsonParser/include;../../../Dependency/Luna/src/Library/ccWebServer/include;../../../Dependency/Luna/src/Library/ccNetwork/include;../../../Dependency/Luna/src/Library/ccCore/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../../Dependence/Luna/src/ThirdPartyLibrary/ccMongooseServer/include;../../../Dependence/Luna/src/FossLibrary/ccJsonParser/include;../../../Dependence/Luna/src/Library/ccWebServer/include;../../../Dependence/Luna/src/Library/ccNetwork/include;../../../Dependence/Luna/src/Library/ccCore/include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -232,23 +232,20 @@
     <Image Include="res\IoTDeviceManagerEmulator.ico" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Dependency\Luna\src\FossLibrary\ccJsonParser\msvc\ccJsonParser.VS2017.vcxproj">
+    <ProjectReference Include="..\..\..\Dependence\Luna\src\FossLibrary\ccJsonParser\msvc\ccJsonParser.VS2017.vcxproj">
       <Project>{e7bfc6a3-98b0-4103-a3ba-de08105f2db3}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Dependency\Luna\src\Library\ccCore\msvc\ccCore.VS2017.vcxproj">
+    <ProjectReference Include="..\..\..\Dependence\Luna\src\Library\ccCore\msvc\ccCore.VS2017.vcxproj">
       <Project>{b3b6750e-2acd-4362-845a-2a79ab52fbd1}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Dependency\Luna\src\Library\ccNetwork\msvc\ccNetwork.VS2017.vcxproj">
+    <ProjectReference Include="..\..\..\Dependence\Luna\src\Library\ccNetwork\msvc\ccNetwork.VS2017.vcxproj">
       <Project>{22622606-5d5b-499c-8f3d-bad302a10950}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Dependency\Luna\src\Library\ccWebServer\msvc\ccWebServer.VS2017.vcxproj">
+    <ProjectReference Include="..\..\..\Dependence\Luna\src\Library\ccWebServer\msvc\ccWebServer.VS2017.vcxproj">
       <Project>{4b237a6f-f4d9-4bbf-9d63-6460ddf8b984}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Dependency\Luna\src\ThirdPartyLibrary\ccMongooseServer\msvc\ccMongooseServer.VS2017.vcxproj">
+    <ProjectReference Include="..\..\..\Dependence\Luna\src\ThirdPartyLibrary\ccMongooseServer\msvc\ccMongooseServer.VS2017.vcxproj">
       <Project>{e3fcc667-3505-4635-a78b-ea15e73d4755}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Dependency\Luna\src\FossLibrary\ccJsonParser\msvc\ccJsonParser.vcxproj">
-      <Project>{e7bfc6a3-98b0-4103-a3ba-de08105f2db3}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

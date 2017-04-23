@@ -62,9 +62,9 @@ public:
     IoTDeviceDeviceManager  oDeviceManager_;
     IoTDeviceOpenAPIManager oOpenAPIManager_;
 
-    CString bulbName_[IoTDeviceDeviceManager::CV_MAX_BULB_COUNT];
+    CString BulbName_[IoTDeviceDeviceManager::CV_MAX_BULB_COUNT];
     CUIColorStaticST ctlBulb_[IoTDeviceDeviceManager::CV_MAX_BULB_COUNT];
 
-    CString doorLockName1_;
+    CString DoorLockName1_;
     CUIColorStaticST ctlDoorLock1_;
 };

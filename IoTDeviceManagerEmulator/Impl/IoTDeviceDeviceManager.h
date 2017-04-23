@@ -14,9 +14,9 @@ public:
         CV_MAX_DOORLOCK_COUNT = 3,
     };
 
-    std::string bulbName_[CV_MAX_BULB_COUNT];
+    std::string BulbName_[CV_MAX_BULB_COUNT];
     bool    BulbStatus_[CV_MAX_BULB_COUNT];
-    std::string doorLockName1_;
+    std::string DoorLockName1_;
     bool    DoorLockStatus1_;
 
 };

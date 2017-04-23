@@ -5,15 +5,15 @@ VisualStudioVersion = 15.0.26403.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IoTDeviceManagerEmulator", "IoTDeviceManagerEmulator.vcxproj", "{0C452676-10FA-46BF-BF3D-AD7E5EEFDD1A}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ccCore", "..\..\..\Dependency\Luna\src\Library\ccCore\msvc\ccCore.VS2017.vcxproj", "{B3B6750E-2ACD-4362-845A-2A79AB52FBD1}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ccCore", "..\..\..\Dependence\Luna\src\Library\ccCore\msvc\ccCore.VS2017.vcxproj", "{B3B6750E-2ACD-4362-845A-2A79AB52FBD1}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ccNetwork", "..\..\..\Dependency\Luna\src\Library\ccNetwork\msvc\ccNetwork.VS2017.vcxproj", "{22622606-5D5B-499C-8F3D-BAD302A10950}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ccNetwork", "..\..\..\Dependence\Luna\src\Library\ccNetwork\msvc\ccNetwork.VS2017.vcxproj", "{22622606-5D5B-499C-8F3D-BAD302A10950}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ccWebServer", "..\..\..\Dependency\Luna\src\Library\ccWebServer\msvc\ccWebServer.VS2017.vcxproj", "{4B237A6F-F4D9-4BBF-9D63-6460DDF8B984}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ccWebServer", "..\..\..\Dependence\Luna\src\Library\ccWebServer\msvc\ccWebServer.VS2017.vcxproj", "{4B237A6F-F4D9-4BBF-9D63-6460DDF8B984}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ccMongooseServer", "..\..\..\Dependency\Luna\src\ThirdPartyLibrary\ccMongooseServer\msvc\ccMongooseServer.VS2017.vcxproj", "{E3FCC667-3505-4635-A78B-EA15E73D4755}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ccMongooseServer", "..\..\..\Dependence\Luna\src\ThirdPartyLibrary\ccMongooseServer\msvc\ccMongooseServer.VS2017.vcxproj", "{E3FCC667-3505-4635-A78B-EA15E73D4755}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ccJsonParser", "..\..\..\Dependency\Luna\src\FossLibrary\ccJsonParser\msvc\ccJsonParser.VS2017.vcxproj", "{E7BFC6A3-98B0-4103-A3BA-DE08105F2DB3}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ccJsonParser", "..\..\..\Dependence\Luna\src\FossLibrary\ccJsonParser\msvc\ccJsonParser.VS2017.vcxproj", "{E7BFC6A3-98B0-4103-A3BA-DE08105F2DB3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
