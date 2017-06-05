@@ -10,19 +10,22 @@ SET(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 SET(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
+SET(LUNA_SW_PLATFORM ${CMAKE_CURRENT_SOURCE_DIR}/Dependence/Luna)
+SET(CMAKE_CXX_FLAGS "-std=c++11")
+
 include_directories(
 	./ 
-	./Dependence/Luna/src/Library/ccCore/include
-	./Dependence/Luna/src/Library/ccNetwork/include
-	./Dependence/Luna/src/Library/ccWebServer/include
-	./Dependence/Luna/src/FossLibrary/ccJsonParser/include
-	./Dependence/Luna/src/FossLibrary/ccWebsocketClient/include
-	./Dependence/Luna/src/ThirdPartyLibrary/ccMongooseServer/include)
+	${LUNA_SW_PLATFORM}/src/Library/ccCore/include
+	${LUNA_SW_PLATFORM}/src/Library/ccNetwork/include
+	${LUNA_SW_PLATFORM}/src/Library/ccWebServer/include
+	${LUNA_SW_PLATFORM}/src/FossLibrary/ccJsonParser/include
+	${LUNA_SW_PLATFORM}/src/FossLibrary/ccWebsocketClient/include
+	${LUNA_SW_PLATFORM}/src/ThirdPartyLibrary/ccMongooseServer/include
+)
 
 
 # Check OS and Processor Information 
 #
-SET(CMAKE_CXX_FLAGS "-std=c++11")
 ADD_DEFINITIONS(-Wall -DCALIB_CFG_OS="${CMAKE_SYSTEM_NAME}" -DCALIB_CFG_CPU="${CMAKE_SYSTEM_PROCESSOR}")
 
 # link_directories(${CMAKE_LIBRARY_OUTPUT_DIRECTORY})
